@@ -1,0 +1,591 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f3f5f9;
+    color: #344054;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.browser-frame {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+.site-header {
+    background: #ffffff;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #f4d675;
+}
+
+.site-title {
+    font-size: 25px;
+    color: #263b5b;
+    font-weight: 750;
+}
+
+.subtitulo-logo {
+    color: #8a96a8;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+/* =====================================
+   NAVEGACIÓN
+===================================== */
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #526176;
+    padding: 11px 17px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background: #eaf1fb;
+    color: #315b91;
+}
+
+
+/* =====================================
+   CONTENIDO PRINCIPAL
+===================================== */
+
+.contenido {
+    width: 86%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 55px 0;
+    flex: 1;
+}
+
+
+/* =====================================
+   BIENVENIDA
+===================================== */
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #fff1c9;
+    color: #8a681c;
+    padding: 9px 18px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.titulo {
+    color: #263b5b;
+    font-size: clamp(27px, 4vw, 38px);
+    margin-bottom: 15px;
+    font-weight: 750;
+}
+
+.descripcion {
+    color: #7b8799;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* =====================================
+   BUSCADOR
+===================================== */
+
+.busqueda {
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 18px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 20px rgba(40, 60, 90, 0.06);
+    border: 1px solid #edf0f5;
+}
+
+.busqueda-titulo {
+    margin-bottom: 18px;
+}
+
+.busqueda-titulo h3 {
+    color: #263b5b;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.busqueda-titulo p {
+    color: #8a96a8;
+    font-size: 14px;
+}
+
+
+/* CAMPO DE BÚSQUEDA */
+
+.buscador {
+    display: flex;
+    align-items: center;
+    background: #f5f7fb;
+    border: 2px solid #e5eaf2;
+    border-radius: 12px;
+    padding: 5px 10px 5px 15px;
+    transition: 0.3s;
+}
+
+.buscador:focus-within {
+    border-color: #7799c7;
+    box-shadow: 0 0 0 4px rgba(119, 153, 199, 0.12);
+}
+
+.icono-busqueda {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.buscador input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    padding: 13px 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #344054;
+    font-size: 15px;
+}
+
+.buscador input::placeholder {
+    color: #a4adba;
+}
+
+.buscador button {
+    background: #365d8d;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buscador button:hover {
+    background: #24466f;
+    transform: translateY(-1px);
+}
+
+
+/* CONTADOR */
+
+.contador {
+    color: #8a96a8;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   GALERÍA DE LIBROS
+===================================== */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+
+/* TARJETA */
+
+.libro {
+    background: #ffffff;
+    border-radius: 17px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #edf0f5;
+    box-shadow: 0 5px 18px rgba(40, 60, 90, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.libro:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 13px 28px rgba(40, 60, 90, 0.13);
+}
+
+
+/* PORTADAS */
+
+.portada {
+    height: 265px;
+    background: #f0f3f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.libro:hover .portada img {
+    transform: scale(1.04);
+}
+
+
+/* INFORMACIÓN DEL LIBRO */
+
+.info-libro {
+    padding: 21px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+
+/* CATEGORÍA */
+
+.categoria {
+    display: inline-block;
+    background: #eaf1fb;
+    color: #426b9e;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+
+/* TÍTULO */
+
+.info-libro h3 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.info-libro h3 a {
+    color: #263b5b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.info-libro h3 a:hover {
+    color: #668fbe;
+}
+
+
+/* AUTOR */
+
+.autor {
+    color: #8a96a8;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+/* BOTÓN DESCARGA */
+
+.boton-descarga {
+    display: inline-block;
+    margin-top: auto;
+    background: #f4d675;
+    color: #594719;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 11px 17px;
+    border-radius: 9px;
+    transition: 0.3s;
+}
+
+.boton-descarga:hover {
+    background: #edc44b;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   SIN RESULTADOS
+===================================== */
+
+.sin-resultados {
+    display: none;
+    text-align: center;
+    background: #ffffff;
+    padding: 55px 20px;
+    border-radius: 17px;
+    margin-top: 25px;
+    border: 1px solid #edf0f5;
+}
+
+.sin-resultados span {
+    font-size: 45px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sin-resultados h3 {
+    color: #263b5b;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.sin-resultados p {
+    color: #8a96a8;
+    font-size: 14px;
+}
+
+
+/* =====================================
+   VOLVER
+===================================== */
+
+.volver {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.volver a {
+    display: inline-block;
+    text-decoration: none;
+    background: #365d8d;
+    color: #ffffff;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.volver a:hover {
+    background: #24466f;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+.site-footer {
+    background: #263b5b;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: auto;
+}
+
+.site-footer p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.site-footer span {
+    color: #c4d0e1;
+    font-size: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE - TABLETS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .contenido {
+        width: 90%;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .site-header {
+        padding: 15px 5%;
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE - CELULARES
+===================================== */
+
+@media (max-width: 600px) {
+
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 18px 12px;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .site-title {
+        font-size: 21px;
+    }
+
+    .main-nav ul {
+        gap: 5px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .contenido {
+        width: 92%;
+        padding: 35px 0;
+    }
+
+    .bienvenida {
+        margin-bottom: 30px;
+    }
+
+    .titulo {
+        font-size: 27px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .busqueda {
+        padding: 20px 16px;
+    }
+
+    .busqueda-titulo h3 {
+        font-size: 18px;
+    }
+
+    .buscador {
+        padding: 5px 7px;
+    }
+
+    .buscador input {
+        font-size: 13px;
+    }
+
+    .buscador button {
+        padding: 10px 11px;
+        font-size: 12px;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .portada {
+        height: 280px;
+    }
+
+    .info-libro {
+        padding: 20px;
+    }
+
+    .volver {
+        margin-top: 35px;
+    }
+
+}
+
+
+/* =====================================
+   ANIMACIÓN DE APARICIÓN
+===================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .libro {
+        animation: aparecer 0.5s ease;
+    }
+
+    @keyframes aparecer {
+
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
+}

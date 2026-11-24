@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Libros - Snoopy's Library</title>
+
+    <link rel="stylesheet" href="css/libros.css">
+
+</head>
+
+<body>
+
+    <div class="browser-frame">
+
+        <!-- ENCABEZADO -->
+        <header class="site-header">
+
+            <div class="logo-container">
+
+                <img src="img/snoopy.jpg"
+                     alt="Snoopy leyendo"
+                     class="logo">
+
+                <div>
+                    <h1 class="site-title">Snoopy's Library</h1>
+                    <p class="subtitulo-logo">Un mundo lleno de historias</p>
+                </div>
+
+            </div>
+
+            <nav class="main-nav">
+
+                <ul>
+                    <li><a href="Ej4.html">Inicio</a></li>
+
+                    <li>
+                        <a href="libros.html" class="active">
+                            Libros
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="cerrarSesion">
+                            Cerrar sesión
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="contenido">
+
+            <!-- PRESENTACIÓN -->
+            <section class="bienvenida">
+
+                <span class="etiqueta">📖 Nuestra biblioteca digital</span>
+
+                <h2 class="titulo">
+                    Encuentra tu próxima historia favorita
+                </h2>
+
+                <p class="descripcion">
+                    Explora nuestra colección de libros, descubre nuevas
+                    aventuras y descarga tus historias favoritas.
+                </p>
+
+            </section>
+
+
+            <!-- BUSCADOR -->
+            <section class="busqueda">
+
+                <div class="busqueda-titulo">
+                    <h3>¿Qué te gustaría leer?</h3>
+                    <p>Busca por título del libro o nombre del autor.</p>
+                </div>
+
+                <div class="buscador">
+
+                    <span class="icono-busqueda">🔍</span>
+
+                    <input
+                        type="text"
+                        id="buscarLibro"
+                        placeholder="Escribe el título o autor..."
+                        autocomplete="off"
+                    >
+
+                    <button type="button" id="limpiarBusqueda">
+                        Limpiar
+                    </button>
+
+                </div>
+
+                <p class="contador" id="contadorLibros">
+                    Mostrando 6 libros
+                </p>
+
+            </section>
+
+
+            <!-- GALERÍA DE LIBROS -->
+            <section class="galeria" id="galeriaLibros">
+
+                <!-- LIBRO 1 -->
+                <article class="libro">
+
+                    <div class="portada">
+                        <img src="portadas/el_principito.jpg"
+                             alt="Portada de El Principito">
+                    </div>
+
+                    <div class="info-libro">
+
+                        <span class="categoria">Fantasía y aventura</span>
+
+                        <h3>
+                            <a href="libros/el_principito.pdf" download>
+                                El Principito
+                            </a>
+                        </h3>
+
+                        <p class="autor">Antoine de Saint-Exupéry</p>
+
+                        <a class="boton-descarga"
+                           href="libros/el_principito.pdf"
+                           download>
+                            ↓ Descargar libro
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 2 -->
+                <article class="libro">
+
+                    <div class="portada">
+                        <img src="img/portadas/alicia.jpg"
+                             alt="Portada de Alicia en el País de las Maravillas">
+                    </div>
+
+                    <div class="info-libro">
+
+                        <span class="categoria">Fantasía</span>
+
+                        <h3>
+                            <a href="libros/alicia.pdf" download>
+                                Alicia en el País de las Maravillas
+                            </a>
+                        </h3>
+
+                        <p class="autor">Lewis Carroll</p>
+
+                        <a class="boton-descarga"
+                           href="libros/alicia.pdf"
+                           download>
+                            ↓ Descargar libro
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 3 -->
+                <article class="libro">
+
+                    <div class="portada">
+                        <img src="img/portadas/dorian.jpg"
+                             alt="Portada de El retrato de Dorian Gray">
+                    </div>
+
+                    <div class="info-libro">
+
+                        <span class="categoria">Novela clásica</span>
+
+                        <h3>
+                            <a href="libros/dorian_gray.pdf" download>
+                                El retrato de Dorian Gray
+                            </a>
+                        </h3>
+
+                        <p class="autor">Oscar Wilde</p>
+
+                        <a class="boton-descarga"
+                           href="libros/dorian_gray.pdf"
+                           download>
+                            ↓ Descargar libro
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 4 -->
+                <article class="libro">
+
+                    <div class="portada">
+                        <img src="img/portadas/frankenstein.jpg"
+                             alt="Portada de Frankenstein">
+                    </div>
+
+                    <div class="info-libro">
+
+                        <span class="categoria">Terror y ciencia ficción</span>
+
+                        <h3>
+                            <a href="libros/frankenstein.pdf" download>
+                                Frankenstein
+                            </a>
+                        </h3>
+
+                        <p class="autor">Mary Shelley</p>
+
+                        <a class="boton-descarga"
+                           href="libros/frankenstein.pdf"
+                           download>
+                            ↓ Descargar libro
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 5 -->
+                <article class="libro">
+
+                    <div class="portada">
+                        <img src="img/portadas/romeo.jpg"
+                             alt="Portada de Romeo y Julieta">
+                    </div>
+
+                    <div class="info-libro">
+
+                        <span class="categoria">Drama y romance</span>
+
+                        <h3>
+                            <a href="libros/romeo_julieta.pdf" download>
+                                Romeo y Julieta
+                            </a>
+                        </h3>
+
+                        <p class="autor">William Shakespeare</p>
+
+                        <a class="boton-descarga"
+                           href="libros/romeo_julieta.pdf"
+                           download>
+                            ↓ Descargar libro
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LIBRO 6 -->
+                <article class="libro">
+
+                    <div class="portada">
+                        <img src="img/portadas/aventuras.jpg"
+                             alt="Portada de Las aventuras de Sherlock Holmes">
+                    </div>
+
+                    <div class="info-libro">
+
+                        <span class="categoria">Misterio</span>
+
+                        <h3>
+                            <a href="libros/sherlock_holmes.pdf" download>
+                                Las aventuras de Sherlock Holmes
+                            </a>
+                        </h3>
+
+                        <p class="autor">Arthur Conan Doyle</p>
+
+                        <a class="boton-descarga"
+                           href="libros/sherlock_holmes.pdf"
+                           download>
+                            ↓ Descargar libro
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- MENSAJE SIN RESULTADOS -->
+            <div class="sin-resultados" id="sinResultados">
+
+                <span>📚</span>
+
+                <h3>No encontramos ese libro</h3>
+
+                <p>
+                    Intenta buscar con otro título o nombre de autor.
+                </p>
+
+            </div>
+
+
+            <!-- BOTÓN VOLVER -->
+            <div class="volver">
+
+                <a href="Ej4.html">
+                    ← Volver a la biblioteca principal
+                </a>
+
+            </div>
+
+        </main>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="site-footer">
+
+            <p>
+                © 2026 Snoopy's Library.
+                Todos los derechos reservados.
+            </p>
+
+            <span>Hecho con ♥ para los amantes de la lectura.</span>
+
+        </footer>
+
+    </div>
+
+
+    <!-- FUNCIONALIDAD DEL BUSCADOR Y SESIÓN -->
+    <script>
+
+        // PROTECCIÓN DE ACCESO
+
+        const usuario = sessionStorage.getItem("usuarioBiblioteca");
+
+        if (!usuario) {
+
+            alert("Debes iniciar sesión para acceder a los libros.");
+
+            window.location.replace("Sesion.php");
+
+        }
+
+
+        // CERRAR SESIÓN
+
+        document.getElementById("cerrarSesion").addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            sessionStorage.removeItem("usuarioBiblioteca");
+
+            window.location.href = "Ej4.html";
+
+        });
+
+
+        // BUSCADOR DE LIBROS
+
+        const buscador = document.getElementById("buscarLibro");
+
+        const libros = document.querySelectorAll(".libro");
+
+        const sinResultados = document.getElementById("sinResultados");
+
+        const contador = document.getElementById("contadorLibros");
+
+        const botonLimpiar = document.getElementById("limpiarBusqueda");
+
+
+        function normalizarTexto(texto) {
+
+            return texto
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
+        }
+
+
+        function buscarLibros() {
+
+            const textoBusqueda = normalizarTexto(buscador.value.trim());
+
+            let encontrados = 0;
+
+            libros.forEach(function(libro) {
+
+                const titulo = libro.querySelector("h3").textContent;
+
+                const autor = libro.querySelector(".autor").textContent;
+
+                const tituloNormalizado = normalizarTexto(titulo);
+
+                const autorNormalizado = normalizarTexto(autor);
+
+                if (
+                    tituloNormalizado.includes(textoBusqueda) ||
+                    autorNormalizado.includes(textoBusqueda)
+                ) {
+
+                    libro.style.display = "flex";
+
+                    encontrados++;
+
+                } else {
+
+                    libro.style.display = "none";
+
+                }
+
+            });
+
+
+            // ACTUALIZAR CONTADOR
+
+            contador.textContent =
+                "Mostrando " + encontrados +
+                (encontrados === 1 ? " libro" : " libros");
+
+
+            // MOSTRAR MENSAJE SI NO HAY RESULTADOS
+
+            if (encontrados === 0) {
+
+                sinResultados.style.display = "block";
+
+            } else {
+
+                sinResultados.style.display = "none";
+
+            }
+
+        }
+
+
+        // BUSCAR MIENTRAS EL USUARIO ESCRIBE
+
+        buscador.addEventListener("input", buscarLibros);
+
+
+        // LIMPIAR BUSCADOR
+
+        botonLimpiar.addEventListener("click", function() {
+
+            buscador.value = "";
+
+            buscarLibros();
+
+            buscador.focus();
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
